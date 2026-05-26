@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector AI</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <main class="container">
+        <header>
+            <div class="logo" aria-hidden="true"></div>
+            <h1>Fake News Detector AI</h1>
+            <p class="subtitle">Analise notícias utilizando Inteligência Artificial Generativa.</p>
+        </header>
+
+        <section>
+            <form onsubmit="event.preventDefault(); analyzeNews();">
+                <label for="news" class="sr-only">Cole a notícia aqui</label>
+                <textarea 
+                    id="news" 
+                    placeholder="Cole aqui a notícia para análise..."
+                    required
+                ></textarea>
+                
+                <button type="submit">
+                    <span>🔍</span> Analisar Notícia
+                </button>
+            </form>
+            
+            <div id="result" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
